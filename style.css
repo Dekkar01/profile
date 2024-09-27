@@ -7,6 +7,7 @@
   font-weight: lighter;
 }
 
+
 @media (max-width: 960px) {
   /* For a screen < 960px, this CSS will be read */
   .all {
@@ -27,10 +28,97 @@
     width: 300px;
   }
 }
-.all {
-  width: 700px;
-  margin: 40px auto;
+
+#logo img {
+  width: 50px;
+  height: 50px;
+  margin-top: 10px;
+  margin-left: 20px;
 }
+
+#navbar {
+  display: flex;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+}
+
+#navbar div {
+  width: 50%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+
+#menu-list a {
+  text-decoration: none;
+  color: #6B72E1;
+  padding: 15px 20px;
+  border-radius: 4px;
+
+  margin-bottom: 30px;
+}
+#menu-list a:hover {
+  color: #424abd;
+  text-decoration: underline;
+  text-underline-offset: 0.6rem;
+  transition: 0.3s ease
+}
+#introduce-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 70px;
+  padding: 20px;
+}
+
+#img-intro img {
+  max-width: 400px;
+  border-radius: 50%;
+}
+
+#text-intro {
+  flex-grow: 1;
+  align-self: center;
+  text-align: center;
+}
+
+.all {
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+.btn {
+  display: inline-block;
+  padding: 13px 60px;
+  font-size: 16px;
+  font-weight: bold;
+  color: #122035;
+  background-color: #ffffff;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+
+}
+
+.btn:hover {
+  background-color: #122035;
+  color: #ffffff;
+  transition: background-color 0.4s ease;
+}
+
+.btn:active {
+  background-color: #000000;
+}
+
+
+
+
 .box-card {
   background-color: white;
   padding: 40px;
@@ -40,10 +128,7 @@
   text-align: center;
 
 }
-img {
-  border-radius: 50%;
-  width: 100px;
-}
+
 h1 {
   color: rgb(82, 121, 158);
   font-size: 32px;
