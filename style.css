@@ -1,7 +1,7 @@
 * {
   margin-top: 10px;
 
-  font-family: 'Roboto', sans-serif;
+  font-family: "Poppins", sans-serif;
   background-color: #fafdff;
   font-size: 17px;
   font-weight: lighter;
@@ -52,6 +52,13 @@
 
 }
 
+section {
+  padding-top: 4vh;
+  height: 96vh;
+  margin: 0 10rem;
+  box-sizing: border-box;
+  min-height: fit-content;
+}
 
 #menu-list a {
   text-decoration: none;
@@ -67,29 +74,35 @@
   text-underline-offset: 0.6rem;
   transition: 0.3s ease
 }
-#introduce-card {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 70px;
-  padding: 20px;
-}
 
+#about {
+  display: flex;
+  justify-content: center;
+  gap: 5rem;
+   height: 80vh;
+}
+#img-intro {
+  display: flex;
+  height: 400px;
+  width: 400px;
+  margin: auto 0;
+}
 #img-intro img {
-  max-width: 400px;
   border-radius: 50%;
 }
 
 #text-intro {
-  flex-grow: 1;
   align-self: center;
   text-align: center;
 }
+.btn-container {
+  margin-top: 1rem;
+  gap: 1rem;
+  display: flex;
+  justify-content: center;
 
-.all {
-  max-width: 960px;
-  margin: 0 auto;
 }
+
 
 .btn {
   display: inline-block;
@@ -97,9 +110,10 @@
   font-size: 16px;
   font-weight: bold;
   color: #122035;
-  background-color: #99a4b2;
-  border: none;
-  border-radius: 25px;
+  background-color: white;
+
+  box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.1);
+  border-radius: 4px;
   cursor: pointer;
   text-align: center;
   text-decoration: none;
