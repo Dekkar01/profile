@@ -5,29 +5,80 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.1.2/css/all.css">
   <link rel="stylesheet" href="style.css">
-  <title>Portfolio</title>
+  <title>Anastasiia Lykhvar</title>
 </head>
 <body>
-  <div class="all">
-    <div id="introduce-card" class="box-card">
-      <h1>Hello, I'm Anastasiia 😺</h1>
+  <nav id="navbar">
+    <div id="logo">
+      <!-- <img src="img/image.png" alt="logo"> -->
+      <h1>Anastasiia Lykhvar</h1>
+    </div>
+     <div id="menu-list">
+      <ul>
+        <li><a href="#about-more">About</a></li>
+        <li><a href="#">Expirience</a></li>
+        <li><a href="#portfolio ">Projects</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+     </div>
+  </nav>
+  <section id="about">
+    <div id="img-intro">
       <img src="https://avatars.githubusercontent.com/u/167749567?v=4">
-      <p>I love reading📚, listening to music🎧, drawing🎨 and coding👩‍💻. I launched Le Wagon to improve my skills</p>
-      <a href="https://lewagon.github.io/html-css-challenges/01-profile-content-new/#" target="_blank">Discover Le Wagon
-      </a>
+    </div>
+    <div id="text-intro">
+      <p>Hello, I'm</p>
+      <h1>Anastasiia Lykhvar</h1>
+      <p>Junior Fullstek-Developer</p>
+      <div class="btn-container">
+          <button class="btn" onclick="window.open('assets/CV_Anastasiia_Lykhvar.pdf')">CV</button>
+      </div>
+
+
     </div>
 
+  </section>
+
+  <section id="about-more">
+    <div>
+      <p>
+        Hi! On this site is published information about me and my projects in web development. The main goal is to show the portfolio of a beginner fullstack developer. I tried to create a portfolio site with a share of creativity and humor, inspired by the works of my friends in the profession.
+        I graduated from college with a degree in software development and university with a degree in cybersecurity. I like to work with code, to understand how the process is built, its logic. When you spend hours or days on a task and it works, it's a great feeling).
+      </p>
+    </div>
+  </section>
+
+  <section id="expirience">
+
+  </section>
+
+  <section id="portfolio">
+    <div class="proj-container">
+      <div class="proj-cards">
+        <img src="img/book_wanderer.png" alt="BookWanderer">
+        <h2>BookWanderer</h2>
+        <p>Some info ab proj</p>
+      </div>
+      <div class="proj-cards">
+        <img src="img/book_rental.png" alt="bookRental">
+        <h2>bookRental</h2>
+        <p>Some info ab proj</p>
+      </div>
+
+    </div>
+  </section>
+
+
+  <section id="contact">
     <div id="follow-card" class="box-card">
-      <h2>Follow me</h2>
+      <!-- <h2>Follow me</h2> -->
       <ul>
         <li><a href = "https://github.com/Dekkar01" target="_blank"><i class="fa-brands fa-square-github"></i></a></li>
         <li><a href = "https://t.me/y_or_n" target="_blank"><i class="fa-brands fa-telegram"></i></a></li>
 
       </ul>
     </div>
-  </div>
-
-
+  </section>
 
 </body>
 </html>
