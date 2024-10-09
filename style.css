@@ -176,19 +176,50 @@ section {
   }
 }
 
-
-
-
-
-.box-card {
-  background-color: white;
-  padding: 40px;
-  box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.1);
-  border-radius: 4px;
-  margin: 20px 0px;
-  text-align: center;
-
+#about-more {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 70vh;
+  /* background: linear-gradient(135deg, #77bebf, #98d4d4);  */
 }
+
+#about-more div {
+  max-width: 800px; /* Увеличиваем максимальную ширину контейнера */
+  width: 100%;
+  padding: 40px; /* Увеличиваем отступы внутри */
+  background-color: white;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  text-align: center;
+  position: relative;
+}
+
+#about-more p {
+  font-size: 20px; /* Увеличиваем размер текста */
+  line-height: 1.8;
+  color: #333;
+  margin: 20px 0; /* Добавляем отступы сверху и снизу */
+}
+
+/* Добавление фона с узором или текстурой */
+#about-more:before {
+  content: '';
+  position: absolute;
+  top: -10px;
+  left: -10px;
+  width: 100%;
+  height: 100%;
+  background: url('path_to_texture_or_pattern.png');
+  opacity: 0.05; /* Делаем его прозрачным */
+  z-index: 1;
+}
+
+#about-more div {
+  z-index: 2; /* Контент должен быть поверх фона */
+}
+
+
 
 h1 {
   color: rgb(82, 121, 158);
@@ -214,6 +245,7 @@ p {
 h2 {
   font-size: 20px;
   color: #349060;
+  font-weight: bold;
 }
 
 a:hover {
@@ -237,4 +269,25 @@ i {
 }
 #follow-card i:hover {
   color: black;
+}
+
+.box-card {
+  width: 160px;
+  position: fixed;
+  z-index: 1;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+
+  overflow-x: hidden;
+  padding-top: 20px;
+}
+
+.box-card i {
+  /* padding: 10px; */
+  margin: 10px 20px;
 }
