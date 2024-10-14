@@ -63,6 +63,7 @@ section {
 #menu-list a {
   text-decoration: none;
   color: #6B72E1;
+  color: #000000;
   padding: 15px 20px;
   border-radius: 4px;
 
@@ -70,6 +71,7 @@ section {
 }
 #menu-list a:hover {
   color: #424abd;
+  color: #122035;
   text-decoration: underline;
   text-underline-offset: 0.6rem;
   transition: 0.3s ease
@@ -212,14 +214,15 @@ section {
 
 h1 {
   color: rgb(82, 121, 158);
-
+  color: rgb(32, 31, 31);
   font-size: 2rem;
   text-align: center;
   margin-top: 0px
 
 }
 p {
-  color: #575F7D;
+  /* color: #575F7D; */
+  color: black;
   font-size: 17px;
   margin-bottom: 40px;
 }
@@ -233,7 +236,7 @@ p {
 }
 h2 {
   font-size: 20px;
-  color: #349060;
+  color: #14432b;
   font-weight: bold;
 }
 
@@ -279,4 +282,216 @@ i {
 .box-card i {
   /* padding: 10px; */
   margin: 10px 20px;
+}
+
+
+
+
+
+
+
+
+#follow-card {
+  text-align: center;
+  vertical-align: middle;
+}
+#follow-card  li {
+  display: inline-block;
+  vertical-align: text-bottom;
+}
+#follow-card  li:hover i {
+  color:#282c61;
+  border-radius: 5px;
+  transform: rotate(45deg) scale(0.8);
+}
+#follow-card  li:hover i::before {
+  transform: rotate(-45deg) scale(1.5);
+}
+#follow-card i {
+  display: inline-block;
+  font-size: 35px;
+
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  line-height: 60px;
+  color: black;
+  margin: 0 10px 10px 10px;
+  transition-duration: 0.3s;
+}
+#follow-card  i::before {
+  transition-duration: 0.3s;
+}
+#follow-card .box i.fa::before {
+  display: block;
+}
+
+
+
+
+
+
+
+
+#expirience {
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch; /* Выравнивание по высоте */
+  height: 80vh; /* Ограничиваем высоту секции */
+}
+
+.description,
+.edu {
+  width: 48%;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Центрирование контента по вертикали */
+  max-height: 75vh; /* Ограничиваем максимальную высоту блоков */
+  overflow-y: auto; /* Добавляем скролл, если контент превышает высоту */
+}
+
+.description {
+  background-color: #f5f5f5;
+  padding: 20px;
+  text-align: center; /* Центрирование текста */
+}
+
+.edu {
+  background: #122035;
+  padding: 15px;
+}
+
+.edu h3 {
+  text-align: center; /* Центрируем заголовок в блоке образования */
+  margin-bottom: 20px;
+}
+
+/* Стили для списка образования */
+.edu small {
+  display: block;
+  opacity: 0.7;
+}
+
+.edu ul {
+  position: relative;
+}
+
+.edu ul li {
+  position: relative;
+  margin-left: 30px; /* Увеличиваем отступ для выравнивания текста */
+  padding-left: 25px;
+  padding-bottom: 15px;
+}
+
+.edu ul li::before,
+.edu ul li::after {
+  content: "";
+  display: block;
+  position: absolute;
+}
+
+.edu ul li::before {
+  width: 10px;
+  height: 10px;
+  border: 3px solid white;
+  background-color: rgb(12, 104, 225);
+  border-radius: 50%;
+  left: -25px; /* Сдвигаем линию еще левее */
+  z-index: 1;
+}
+
+.edu ul li::after {
+  width: 3px;
+  height: 100%;
+  background: #ffffff;
+  left: -20px; /* Линия также сдвигается левее, чтобы не пересекать текст */
+  top: 0;
+}
+
+.edu ul li:last-of-type::after {
+  border-radius: 1.5px;
+  height: calc(100% - 3px);
+}
+
+/* Анимация */
+.edu ul li:hover::before {
+  animation: circle 1.2s infinite;
+}
+
+.edu ul li:hover span {
+  color: #1e2146;
+}
+
+@keyframes circle {
+  from {
+    box-shadow: 0 0 0 0px rgb(149, 58, 194);
+  }
+  to {
+    box-shadow: 0 0 0 6px rgba(255, 255, 255, 0);
+  }
+}
+
+/* Медиа-запрос для мобильных устройств */
+@media (max-width: 768px) {
+  .description,
+  .edu {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+}
+
+
+
+
+
+.skills-soft {
+  clear: both;
+  background: #122035;
+  padding: 15px;
+  margin: 15px 0 0;
+}
+.skills-soft ul {
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+}
+.skills-soft ul li {
+  position: relative;
+}
+.skills-soft ul li:hover svg .cbar {
+  stroke: rgb(81, 0, 255);
+  stroke-width: 4px;
+}
+.skills-soft ul li:hover span,
+.skills-soft ul li:hover small {
+  transform: scale(1.2);
+}
+.skills-soft ul li svg {
+  width: 95%;
+  fill: transparent;
+  transform: rotate(-90deg);
+}
+.skills-soft ul li svg circle {
+  stroke-width: 1px;
+  stroke: white;
+}
+.skills-soft ul li svg .cbar {
+  stroke-width: 3px;
+  stroke: rgb(48, 32, 143);
+  stroke-linecap: round;
+  stroke-dasharray: calc(2 * 3.1416 * 45); /* длина окружности */
+  stroke-dashoffset: calc(2 * 3.1416 * 45 * (1 - var(--percent))); /* смещение */
+  transition: stroke-dashoffset 0.3s; /* анимация */
+}
+.skills-soft ul li span,
+.skills-soft ul li small {
+  position: absolute;
+  display: block;
+  width: 100%;
+  top: 52%;
+  transition-duration: 0.3s;
+}
+.skills-soft ul li span {
+  top: 40%;
 }
