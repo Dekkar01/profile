@@ -390,24 +390,25 @@ i {
   display: block;
   position: absolute;
 }
-
+/*
 .edu ul li::before {
   width: 10px;
   height: 10px;
   border: 3px solid white;
   background-color: rgb(12, 104, 225);
   border-radius: 50%;
-  left: -25px; /* Сдвигаем линию еще левее */
+  left: -25px; 
   z-index: 1;
-}
+} */
 
-.edu ul li::after {
+/* .edu ul li::after {
   width: 3px;
   height: 100%;
   background: #ffffff;
-  left: -20px; /* Линия также сдвигается левее, чтобы не пересекать текст */
+  left: -20px;
   top: 0;
 }
+*/
 
 .edu ul li:last-of-type::after {
   border-radius: 1.5px;
