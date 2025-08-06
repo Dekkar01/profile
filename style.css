@@ -1,12 +1,83 @@
+:root {
+  --primary: #2c3e50;
+  --secondary: #34495e;
+  --accent: #3498db;
+  --light: #ecf0f1;
+  --dark: #1a252f;
+  --text: #2c3e50;
+  --text-light: #7f8c8d;
+  --card-bg: #ffffff;
+  --section-bg: #f8f9fa;
+}
+
 * {
   margin-top: 10px;
-
   font-family: "Poppins", sans-serif;
-  background-color: #fafdff;
   font-size: 17px;
   font-weight: lighter;
 }
 
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: var(--section-bg);
+  color: var(--text);
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+h1, h2, h3 {
+  font-weight: 600;
+  color: var(--primary);
+}
+
+h1 {
+  font-size: 2.5rem;
+      margin-bottom: 0.5rem;
+    }
+
+    h2 {
+      font-size: 2rem;
+      margin-bottom: 2rem;
+      position: relative;
+      padding-bottom: 0.5rem;
+    }
+
+    h2::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 60px;
+      height: 3px;
+      background-color: var(--accent);
+    }
+
+    p {
+      margin-bottom: 1.5rem;
+      color: var(--text-light);
+    }
+
+    section {
+      padding: 5rem 1.5rem;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .section-header {
+      text-align: center;
+      margin-bottom: 3rem;
+    }
+
+    .section-header h2::after {
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 1.5rem;
+    }
 
 @media (max-width: 960px) {
   /* For a screen < 960px, this CSS will be read */
@@ -81,7 +152,7 @@ section {
   display: flex;
   justify-content: center;
   gap: 5rem;
-   height: 80vh;
+  height: 80vh;
 }
 #img-intro {
   display: flex;
@@ -178,39 +249,14 @@ section {
   }
 }
 
-#about-more, #expirience {
-  /* position: absolute;
-  top: -10px;
-  left: -10px;
-  width: 100%;
-  height: 100%; */
 
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 70vh;
-  /* background: linear-gradient(135deg, #77bebf, #98d4d4);  */
+
+
+
+h1, h2, h3 {
+  font-weight: 600;
+  color: var(--primary);
 }
-
-#about-more div, #expirience div {
-  max-width: 800px;
-  width: 100%;
-  padding: 40px;
-  background-color: white;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  border-radius: 10px;
-  text-align: center;
-  /* position: relative; */
-}
-
-#about-more p, #expirience p {
-  font-size: 20px;
-  line-height: 1.8;
-  color: #333;
-  margin: 20px 0;
-}
-
-
 
 h1 {
   color: rgb(82, 121, 158);
@@ -235,10 +281,13 @@ p {
   margin-bottom: 30px;
 }
 h2 {
-  font-size: 20px;
+  font-size: 1.75rem;
   color: #14432b;
   font-weight: bold;
+  
 }
+
+
 
 a:hover {
   color: #1e2146;
@@ -328,100 +377,78 @@ i {
 
 
 
+/* START */
+
+  #experience {
+      background-color: var(--section-bg);
+    }
+
+    .exp-container {
+      display: flex;
+      gap: 3rem;
+    }
+
+    .description {
+      flex: 1;
+      background-color: var(--card-bg);
+      padding: 2rem;
+      border-radius: 10px;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    }
+
+    .edu {
+      flex: 1;
+      background-color: var(--primary);
+      color: white;
+      padding: 2rem;
+      border-radius: 10px;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    }
+
+    .edu h3 {
+      color: white;
+      margin-bottom: 1.5rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .edu ul {
+      list-style: none;
+    }
+
+    .edu li {
+      margin-bottom: 1.5rem;
+      position: relative;
+      padding-left: 1.5rem;
+    }
+
+    .edu li::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 8px;
+      width: 8px;
+      height: 8px;
+      background-color: var(--accent);
+      border-radius: 50%;
+    }
+
+    .edu span {
+      display: block;
+      font-weight: 500;
+      margin-bottom: 0.25rem;
+    }
+
+    .edu small {
+      display: block;
+      color: rgba(255, 255, 255, 0.8);
+      font-size: 0.9rem;
+    }
 
 
+/* END */
 
-
-
-#expirience {
-  display: flex;
-  justify-content: space-between;
-  align-items: stretch; /* Выравнивание по высоте */
-  height: 80vh; /* Ограничиваем высоту секции */
-}
-
-.description,
-.edu {
-  width: 48%;
-  box-sizing: border-box;
-  display: flex;
-  flex-direction: column;
-  justify-content: center; /* Центрирование контента по вертикали */
-  max-height: 75vh; /* Ограничиваем максимальную высоту блоков */
-  overflow-y: auto; /* Добавляем скролл, если контент превышает высоту */
-}
-
-.description {
-  background-color: #f5f5f5;
-  padding: 20px;
-  text-align: center; /* Центрирование текста */
-}
-
-.edu {
-  background: #122035;
-  padding: 15px;
-}
-
-.edu h3 {
-  text-align: center; /* Центрируем заголовок в блоке образования */
-  margin-bottom: 20px;
-}
-
-/* Стили для списка образования */
-.edu small {
-  display: block;
-  opacity: 0.7;
-}
-
-.edu ul {
-  position: relative;
-}
-
-.edu ul li {
-  position: relative;
-  margin-left: 30px; /* Увеличиваем отступ для выравнивания текста */
-  padding-left: 25px;
-  padding-bottom: 15px;
-}
-
-.edu ul li::before,
-.edu ul li::after {
-  content: "";
-  display: block;
-  position: absolute;
-}
-
-.edu ul li::before {
-  width: 10px;
-  height: 10px;
-  border: 3px solid white;
-  background-color: rgb(12, 104, 225);
-  border-radius: 50%;
-  left: -25px; /* Сдвигаем линию еще левее */
-  z-index: 1;
-}
-
-.edu ul li::after {
-  width: 3px;
-  height: 100%;
-  background: #ffffff;
-  left: -20px; /* Линия также сдвигается левее, чтобы не пересекать текст */
-  top: 0;
-}
-
-.edu ul li:last-of-type::after {
-  border-radius: 1.5px;
-  height: calc(100% - 3px);
-}
-
-/* Анимация */
-.edu ul li:hover::before {
-  animation: circle 1.2s infinite;
-}
-
-.edu ul li:hover span {
-  color: #1e2146;
-}
 
 @keyframes circle {
   from {
@@ -474,7 +501,7 @@ i {
 }
 .skills-soft ul li svg circle {
   stroke-width: 1px;
-  stroke: white;
+  stroke: rgb(0, 0, 0);
 }
 .skills-soft ul li svg .cbar {
   stroke-width: 3px;
