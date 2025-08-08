@@ -9,6 +9,10 @@ document.addEventListener('DOMContentLoaded', function () {
           top: target.offsetTop - 80,
           behavior: 'smooth'
         });
+
+        // Close mobile menu if open
+        document.querySelector('#menu-list ul').classList.remove('active');
+        document.querySelector('.hamburger').classList.remove('active');
       }
     });
   });
@@ -78,5 +82,23 @@ document.addEventListener('DOMContentLoaded', function () {
   document.querySelectorAll('section, .project-card, .timeline-item, .hex-item').forEach(el => {
     el.style.opacity = 0;
     observer.observe(el);
+  });
+
+  // Hamburger menu functionality
+  const hamburger = document.querySelector('.hamburger');
+  const menuList = document.querySelector('#menu-list ul');
+
+  hamburger.addEventListener('click', () => {
+    menuList.classList.toggle('active');
+    hamburger.classList.toggle('active');
+  });
+
+  // Close menu when clicking outside
+  document.addEventListener('click', (e) => {
+    const isClickInsideMenu = menuList.contains(e.target) || hamburger.contains(e.target);
+    if (!isClickInsideMenu && menuList.classList.contains('active')) {
+      menuList.classList.remove('active');
+      hamburger.classList.remove('active');
+    }
   });
 });
