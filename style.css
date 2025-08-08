@@ -389,101 +389,76 @@ i {
 
 #experience {
   background-color: var(--section-bg);
+  border-radius: 10px;
+  margin: 2rem auto;
 }
 
-.exp-header {
+.edu-header {
   text-align: center;
   margin-bottom: 3rem;
 }
 
-.exp-header h2 {
+.edu-header h2 {
   font-size: 2rem;
   margin-bottom: 1rem;
-  position: relative;
-  padding-bottom: 0.5rem;
 }
 
-.exp-header h2::after {
-  content: '';
-  position: absolute;
-  bottom: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 60px;
-  height: 3px;
-  background-color: var(--accent);
-}
-
-.exp-header p {
+.edu-header p {
   color: var(--text-light);
   max-width: 600px;
   margin: 0 auto;
 }
 
-.edu-list {
+.edu-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.edu-card {
+  background-color: var(--card-bg);
+  border-radius: 10px;
+  padding: 2rem;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+  transition: var(--transition);
   display: flex;
   flex-direction: column;
-  gap: 1.5rem;
-  max-width: 800px;
-  margin: 0 auto;
 }
 
-.edu-item {
-  background: white;
-  border-radius: 12px;
-  padding: 1.5rem;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
-  display: flex;
-  align-items: flex-start;
-  gap: 1.5rem;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.edu-item:hover {
+.edu-card:hover {
   transform: translateY(-5px);
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12);
 }
 
 .edu-icon {
-  background: var(--edu-bg);
+  background: rgba(52, 152, 219, 0.1);
   color: var(--accent);
-  width: 50px;
-  height: 50px;
+  width: 60px;
+  height: 60px;
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
-  flex-shrink: 0;
-  font-size: 1.2rem;
-}
-
-.edu-content {
-  flex: 1;
+  font-size: 1.5rem;
+  margin-bottom: 1.5rem;
 }
 
 .edu-date {
-  background: var(--edu-bg);
   color: var(--accent);
-  padding: 0.3rem 1rem;
-  border-radius: 20px;
-  font-size: 0.85rem;
   font-weight: 500;
-  display: inline-block;
-  margin-bottom: 0.8rem;
+  margin-bottom: 0.5rem;
+  font-size: 0.9rem;
 }
 
 .edu-title {
-  font-size: 1.2rem;
-  font-weight: 600;
-  color: var(--primary);
-  margin-bottom: 0.3rem;
+  font-size: 1.3rem;
+  margin-bottom: 0.5rem;
 }
 
 .edu-subtitle {
-  color: var(--accent);
+  color: var(--text-light);
   font-weight: 500;
-  margin-bottom: 0.8rem;
-  display: block;
+  margin-bottom: 1rem;
   font-size: 1rem;
 }
 

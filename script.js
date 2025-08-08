@@ -1,8 +1,22 @@
 document.addEventListener('DOMContentLoaded', function () {
+  // Mobile menu toggle
+  const menuToggle = document.querySelector('.menu-toggle');
+  const menuList = document.getElementById('menu-list');
+
+  menuToggle.addEventListener('click', function () {
+    menuList.classList.toggle('active');
+  });
+
   // Smooth scrolling for navigation links
   document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
       e.preventDefault();
+
+      // Close mobile menu if open
+      if (menuList.classList.contains('active')) {
+        menuList.classList.remove('active');
+      }
+
       document.querySelector(this.getAttribute('href')).scrollIntoView({
         behavior: 'smooth'
       });
@@ -23,55 +37,28 @@ document.addEventListener('DOMContentLoaded', function () {
     lastScrollY = window.scrollY;
   });
 
-  // Animation for skill bars
-  // Анимация для таймлайна при скролле
-  document.addEventListener('DOMContentLoaded', function () {
-    const timelineItems = document.querySelectorAll('.timeline-item');
+  // Animation for elements when they come into view
+  const animateOnScroll = () => {
+    const elements = document.querySelectorAll('.proj-cards, .edu-card, .skill-card');
 
-    const animateTimeline = () => {
-      timelineItems.forEach(item => {
-        const position = item.getBoundingClientRect().top;
-        const screenPosition = window.innerHeight * 0.8;
+    elements.forEach(element => {
+      const elementPosition = element.getBoundingClientRect().top;
+      const screenPosition = window.innerHeight * 0.8;
 
-        if (position < screenPosition) {
-          item.style.opacity = '1';
-          item.style.transform = 'translateY(0)';
-        }
-      });
-    };
-
-    // Инициализация анимации
-    timelineItems.forEach(item => {
-      item.style.opacity = '0';
-      item.style.transform = 'translateY(30px)';
-      item.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+      if (elementPosition < screenPosition) {
+        element.style.opacity = '1';
+        element.style.transform = 'translateY(0)';
+      }
     });
+  };
 
-    window.addEventListener('scroll', animateTimeline);
-    animateTimeline(); // Проверить при загрузке
-
-    // Анимация для карточек навыков
-    const skillCards = document.querySelectorAll('.skill-card');
-    let animated = false;
-
-    const animateSkills = () => {
-      if (animated) return;
-
-      skillCards.forEach((card, index) => {
-        const cardPosition = card.getBoundingClientRect().top;
-        const screenPosition = window.innerHeight * 0.8;
-
-        if (cardPosition < screenPosition) {
-          setTimeout(() => {
-            card.style.animation = `fadeInUp 0.6s forwards ${index * 0.1}s`;
-          }, 100);
-        }
-      });
-
-      animated = true;
-    };
-
-    window.addEventListener('scroll', animateSkills);
-    animateSkills(); // Проверить при загрузке
+  // Initialize elements with hidden state
+  document.querySelectorAll('.proj-cards, .edu-card, .skill-card').forEach(el => {
+    el.style.opacity = '0';
+    el.style.transform = 'translateY(20px)';
+    el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
   });
+
+  window.addEventListener('scroll', animateOnScroll);
+  animateOnScroll(); // Initial check
 });
