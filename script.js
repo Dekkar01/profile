@@ -1,64 +1,82 @@
 document.addEventListener('DOMContentLoaded', function () {
-  // Mobile menu toggle
-  const menuToggle = document.querySelector('.menu-toggle');
-  const menuList = document.getElementById('menu-list');
-
-  menuToggle.addEventListener('click', function () {
-    menuList.classList.toggle('active');
-  });
-
-  // Smooth scrolling for navigation links
+  // Smooth scrolling for anchor links
   document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
       e.preventDefault();
-
-      // Close mobile menu if open
-      if (menuList.classList.contains('active')) {
-        menuList.classList.remove('active');
+      const target = document.querySelector(this.getAttribute('href'));
+      if (target) {
+        window.scrollTo({
+          top: target.offsetTop - 80,
+          behavior: 'smooth'
+        });
       }
-
-      document.querySelector(this.getAttribute('href')).scrollIntoView({
-        behavior: 'smooth'
-      });
     });
   });
 
-  // Sticky navigation
+  // Navbar background on scroll
   const navbar = document.getElementById('navbar');
-  let lastScrollY = window.scrollY;
-
   window.addEventListener('scroll', () => {
-    if (lastScrollY < window.scrollY) {
-      navbar.classList.add('nav-hidden');
+    if (window.scrollY > 100) {
+      navbar.style.backgroundColor = 'rgba(10, 25, 47, 0.95)';
+      navbar.style.boxShadow = '0 5px 20px rgba(0, 0, 0, 0.1)';
     } else {
-      navbar.classList.remove('nav-hidden');
+      navbar.style.backgroundColor = 'rgba(10, 25, 47, 0.9)';
+      navbar.style.boxShadow = 'none';
     }
-
-    lastScrollY = window.scrollY;
   });
 
-  // Animation for elements when they come into view
-  const animateOnScroll = () => {
-    const elements = document.querySelectorAll('.proj-cards, .edu-card, .skill-card');
+  // Create particles for background
+  const particlesContainer = document.getElementById('particles-container');
+  for (let i = 0; i < 30; i++) {
+    const particle = document.createElement('div');
+    particle.classList.add('particle');
 
-    elements.forEach(element => {
-      const elementPosition = element.getBoundingClientRect().top;
-      const screenPosition = window.innerHeight * 0.8;
+    const size = Math.random() * 20 + 5;
+    const posX = Math.random() * 100;
+    const posY = Math.random() * 100;
+    const duration = Math.random() * 20 + 10;
+    const delay = Math.random() * 5;
 
-      if (elementPosition < screenPosition) {
-        element.style.opacity = '1';
-        element.style.transform = 'translateY(0)';
+    particle.style.width = `${size}px`;
+    particle.style.height = `${size}px`;
+    particle.style.left = `${posX}%`;
+    particle.style.top = `${posY}%`;
+    particle.style.opacity = Math.random() * 0.5 + 0.1;
+    particle.style.animationDuration = `${duration}s`;
+    particle.style.animationDelay = `${delay}s`;
+
+    particlesContainer.appendChild(particle);
+  }
+
+  // Floating photo effect
+  const floatingPhoto = document.querySelector('.floating-photo');
+  const photoTriggers = document.querySelectorAll('.photo-trigger');
+
+  photoTriggers.forEach(trigger => {
+    trigger.addEventListener('mouseenter', () => {
+      floatingPhoto.style.opacity = 1;
+      floatingPhoto.style.transform = 'translateY(-50%) scale(1)';
+    });
+
+    trigger.addEventListener('mouseleave', () => {
+      floatingPhoto.style.opacity = 0;
+      floatingPhoto.style.transform = 'translateY(-50%) scale(0.2)';
+    });
+  });
+
+  // Animation on scroll
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.style.animation = `fadeIn 0.8s forwards`;
       }
     });
-  };
-
-  // Initialize elements with hidden state
-  document.querySelectorAll('.proj-cards, .edu-card, .skill-card').forEach(el => {
-    el.style.opacity = '0';
-    el.style.transform = 'translateY(20px)';
-    el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+  }, {
+    threshold: 0.1
   });
 
-  window.addEventListener('scroll', animateOnScroll);
-  animateOnScroll(); // Initial check
+  document.querySelectorAll('section, .project-card, .timeline-item, .hex-item').forEach(el => {
+    el.style.opacity = 0;
+    observer.observe(el);
+  });
 });

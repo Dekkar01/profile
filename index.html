@@ -7,234 +7,236 @@
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.1.2/css/all.css">
   <link rel="stylesheet" href="style.css">
   <script src="script.js"></script>
-  <title>Anastasiia Lykhvar</title>
+  <title>Anastasiia Lykhvar | Fullstack Developer</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 
 <body>
+  <div class="floating-photo">
+    <img src="https://avatars.githubusercontent.com/u/167749567?v=4" alt="Anastasiia Lykhvar">
+  </div>
+
+
+  <div id="particles-container"></div>
+
   <nav id="navbar">
-    <div id="logo">
-      <h1>AL</h1>
+    <div id="logo" class="photo-trigger">
+      <a href="#about" class="photo-trigger"><h1>AL</h1></a>
     </div>
     <div id="menu-list">
       <ul>
-        <li><a href="#about">About</a></li>
-        <li><a href="#portfolio ">Projects</a></li>
+        <li><a href="#about" class="photo-trigger">About</a></li>
+        <li><a href="#portfolio">Projects</a></li>
         <li><a href="#experience">Experience</a></li>
         <li><a href="#skills">Skills</a></li>
+        <li><a href="#contact">Contact</a></li>
       </ul>
     </div>
   </nav>
+
   <section id="about">
-    <div id="img-intro">
-      <img src="https://avatars.githubusercontent.com/u/167749567?v=4">
-    </div>
-    <div id="text-intro">
-      <p>Hello, I'm</p>
-      <h1>Anastasiia Lykhvar</h1>
-      <p>Junior Fullstek-Developer</p>
-      <div class="btn-container">
-        <button class="btn" onclick="window.open('assets/CV_Anastasiia_Lykhvar.pdf')">CV</button>
+    <div class="container">
+      <div id="about-content">
+        <div class="avatar-placeholder photo-trigger">
+          <i class="fas fa-user-secret"></i>
+        </div>
+        <div id="text-intro">
+          <p>Hello, I'm</p>
+          <h1>Anastasiia</h1>
+          <p>Fullstack Developer & Creative Technologist</p>
+          <p>I craft elegant digital experiences at the intersection of technology and design. My work balances
+            functionality with aesthetic innovation.</p>
+          <div class="btn-container">
+            <button class="btn" onclick="window.open('assets/CV_Anastasiia_Lykhvar.pdf')">Download CV</button>
+            <a href="#portfolio" class="btn">View Projects</a>
+          </div>
+        </div>
       </div>
-
-
     </div>
-
   </section>
-
-  <!-- <section id="about-more">
-    <div>
-      <p>
-        Hi! On this site is published information about me and my projects in web development. The main goal is to show the portfolio of a beginner fullstack developer. I tried to create a portfolio site with a share of creativity and humor, inspired by the works of my friends in the profession.
-        I graduated from college with a degree in software development and university with a degree in cybersecurity. I like to work with code, to understand how the process is built, its logic. When you spend hours or days on a task and it works, it's a great feeling).
-      </p>
-    </div>
-  </section> -->
 
   <section id="portfolio">
     <div class="container">
       <div class="section-header">
         <h2>Projects</h2>
+        <p>My recent digital creations</p>
       </div>
-
-      <div class="proj-container">
-        <div class="proj-cards">
-          <img src="img/book_wanderer.png" alt="BookWanderer">
-          <div class="card-content">
-            <h2>BookWanderer</h2>
-            <p>2024</p>
-            <p>Web app for avid readers with AI-driven tailored recommendations. Developed in a team of 4 using Ruby on
-              Rails, APIs, Device and more.</p>
-            <div class="card-buttons">
-              <a class="btn" href="https://www.youtube.com/watch?v=MqZWnmpbBhw&list=LL&index=12" target="_blank">Demo</a>
+      <div class="asymmetric-grid">
+        <div class="project-card">
+          <div class="project-img">
+            <img
+              src="img/book_wanderer.png"
+              alt="BookWanderer">
+          </div>
+          <div class="project-content">
+            <h3>BookWanderer</h3>
+            <span class="date">2024</span>
+            <p>AI-driven book recommendations for avid readers. Developed with Ruby on Rails and modern APIs.</p>
+            <div class="project-buttons">
+              <a class="btn" href="https://www.youtube.com/watch?v=MqZWnmpbBhw&list=LL&index=12"
+                target="_blank">Demo</a>
               <a class="btn" href="https://github.com/KimboGilda/book_wanderer" target="_blank">GitHub</a>
             </div>
           </div>
         </div>
 
-        <div class="proj-cards">
-          <img src="img/book_rental.png" alt="bookRental">
-          <div class="card-content">
-            <h2>bookRental</h2>
-            <p>2024</p>
-            <p>Web application for book enthusiasts to rent or reserve books for reading. Team project using Ruby on
-              Rails, APIs, and Devise.</p>
-            <div class="card-buttons">
+        <div class="project-card">
+          <div class="project-img">
+            <img
+              src="img/book_rental.png"
+              alt="bookRental">
+          </div>
+          <div class="project-content">
+            <h3>bookRental</h3>
+            <span class="date">2024</span>
+            <p>Book rental platform for enthusiasts. Team project using Ruby on Rails and Devise.</p>
+            <div class="project-buttons">
               <a class="btn" href="https://github.com/KimboGilda/rbnb_bookRental" target="_blank">GitHub</a>
             </div>
           </div>
         </div>
+
+        
       </div>
     </div>
   </section>
 
-
-   <section id="experience">
+  <section id="experience">
     <div class="container">
-      <div class="edu-header">
-        <h2>Education & Experience</h2>
-        <p>My academic and professional journey</p>
+      <div class="section-header">
+        <h2>Experience & Education</h2>
+        <p>My professional journey</p>
       </div>
 
-      <div class="edu-container">
-        <div class="edu-card">
-          <div class="edu-icon">
+      <div class="geometric-timeline">
+        <div class="timeline-item">
+          <div class="timeline-icon">
             <i class="fas fa-laptop-code"></i>
           </div>
-          <span class="edu-date">07/2024 - 09/2024</span>
-          <h3 class="edu-title">Web Development</h3>
-          <span class="edu-subtitle">Le Wagon</span>
-          <p>9-week full-time intensive coding bootcamp learning Ruby on Rails, JavaScript, HTML/CSS, and modern web development practices.</p>
+          <div class="timeline-content">
+            <span class="timeline-date">07/2024 - 09/2024</span>
+            <h3>Web Development Bootcamp</h3>
+            <p class="edu-subtitle">Le Wagon</p>
+            <p>9-week intensive coding bootcamp focused on Ruby on Rails, JavaScript, and modern web development
+              practices.</p>
+          </div>
         </div>
 
-        <div class="edu-card">
-          <div class="edu-icon">
+        <div class="timeline-item">
+          <div class="timeline-icon">
             <i class="fas fa-shield-alt"></i>
           </div>
-          <span class="edu-date">2020 - 2023</span>
-          <h3 class="edu-title">Bachelor in Cybersecurity</h3>
-          <span class="edu-subtitle">Taras Shevchenko National University of Kyiv</span>
-          <p>Studied foundational computer science concepts and programming fundamentals with a focus on security protocols and defensive strategies.</p>
+          <div class="timeline-content">
+            <span class="timeline-date">2020 - 2023</span>
+            <h3>Bachelor in Cybersecurity</h3>
+            <p class="edu-subtitle">Taras Shevchenko National University of Kyiv</p>
+            <p>Studied foundational computer science concepts with a focus on security protocols and defensive
+              strategies.</p>
+          </div>
         </div>
 
-        <div class="edu-card">
-          <div class="edu-icon">
+        <div class="timeline-item">
+          <div class="timeline-icon">
             <i class="fas fa-code"></i>
           </div>
-          <span class="edu-date">2016 - 2020</span>
-          <h3 class="edu-title">Junior Software Development</h3>
-          <span class="edu-subtitle">Kyiv College of Communication</span>
-          <p>Bachelor of Science degree focused on modern web technologies, software design principles, and development methodologies.</p>
+          <div class="timeline-content">
+            <span class="timeline-date">2016 - 2020</span>
+            <h3>Software Development</h3>
+            <p class="edu-subtitle">Kyiv College of Communication</p>
+            <p>Focused on modern web technologies, software design principles, and development methodologies.</p>
+          </div>
         </div>
       </div>
     </div>
   </section>
-
-
-  <section id="contact">
-    <div id="follow-card" class="box-card">
-      <ul>
-        <li><a href="https://github.com/Dekkar01" target="_blank"><i class="fa-brands fa-square-github"></i></a></li>
-        <li><a href="https://t.me/y_or_n" target="_blank"><i class="fa-brands fa-telegram"></i></a></li>
-        <li><a href="https://www.linkedin.com/in/dekkar01/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
-        </li>
-
-      </ul>
-    </div>
-  </section>
-
 
   <section id="skills">
-    <div class="skills-header">
-      <h2>Technical Skills</h2>
-      <p>Technologies I work with</p>
-    </div>
-
-    <div class="skills-container">
-      <div class="skill-card">
-        <div class="skill-icon">
-          <i class="fab fa-html5"></i>
-        </div>
-        <div class="skill-name">HTML5</div>
-        <div class="skill-level">Advanced</div>
-        <div class="skill-tag">Frontend</div>
+    <div class="container">
+      <div class="section-header">
+        <h2>Technical Skills</h2>
+        <p>Technologies I specialize in</p>
       </div>
 
-      <div class="skill-card">
-        <div class="skill-icon">
-          <i class="fab fa-css3-alt"></i>
+      <div class="hex-grid">
+        <div class="hex-item">
+          <div class="hex-icon">
+            <i class="fab fa-html5"></i>
+          </div>
+          <div class="hex-name">HTML5</div>
         </div>
-        <div class="skill-name">CSS3</div>
-        <div class="skill-level">Advanced</div>
-        <div class="skill-tag">Frontend</div>
-      </div>
 
-      <div class="skill-card">
-        <div class="skill-icon">
-          <i class="fab fa-js"></i>
+        <div class="hex-item">
+          <div class="hex-icon">
+            <i class="fab fa-css3-alt"></i>
+          </div>
+          <div class="hex-name">CSS3</div>
         </div>
-        <div class="skill-name">JavaScript</div>
-        <div class="skill-level">Intermediate</div>
-        <div class="skill-tag">Frontend</div>
-      </div>
 
-      <div class="skill-card">
-        <div class="skill-icon">
-          <i class="fas fa-gem"></i>
+        <div class="hex-item">
+          <div class="hex-icon">
+            <i class="fab fa-js"></i>
+          </div>
+          <div class="hex-name">JavaScript</div>
         </div>
-        <div class="skill-name">Ruby</div>
-        <div class="skill-level">Advanced</div>
-        <div class="skill-tag">Backend</div>
-      </div>
 
-      <div class="skill-card">
-        <div class="skill-icon">
-          <i class="fas fa-server"></i>
+        <div class="hex-item">
+          <div class="hex-icon">
+            <i class="fas fa-gem"></i>
+          </div>
+          <div class="hex-name">Ruby</div>
         </div>
-        <div class="skill-name">Rails</div>
-        <div class="skill-level">Advanced</div>
-        <div class="skill-tag">Backend</div>
-      </div>
 
-      <div class="skill-card">
-        <div class="skill-icon">
-          <i class="fab fa-node-js"></i>
+        <div class="hex-item">
+          <div class="hex-icon">
+            <i class="fas fa-server"></i>
+          </div>
+          <div class="hex-name">Rails</div>
         </div>
-        <div class="skill-name">Node.js</div>
-        <div class="skill-level">Intermediate</div>
-        <div class="skill-tag">Backend</div>
-      </div>
 
-      <div class="skill-card">
-        <div class="skill-icon">
-          <i class="fas fa-database"></i>
+        <div class="hex-item">
+          <div class="hex-icon">
+            <i class="fas fa-database"></i>
+          </div>
+          <div class="hex-name">PostgreSQL</div>
         </div>
-        <div class="skill-name">PostgreSQL</div>
-        <div class="skill-level">Intermediate</div>
-        <div class="skill-tag">Database</div>
-      </div>
 
-      <div class="skill-card">
-        <div class="skill-icon">
-          <i class="fab fa-git-alt"></i>
+        <div class="hex-item">
+          <div class="hex-icon">
+            <i class="fab fa-git-alt"></i>
+          </div>
+          <div class="hex-name">Git</div>
         </div>
-        <div class="skill-name">Git</div>
-        <div class="skill-level">Advanced</div>
-        <div class="skill-tag">Tools</div>
-      </div>
 
-      <div class="skill-card">
-        <div class="skill-icon">
-          <i class="fab fa-github"></i>
+        <div class="hex-item">
+          <div class="hex-icon">
+            <i class="fab fa-node-js"></i>
+          </div>
+          <div class="hex-name">Node.js</div>
         </div>
-        <div class="skill-name">GitHub</div>
-        <div class="skill-level">Advanced</div>
-        <div class="skill-tag">Tools</div>
       </div>
     </div>
   </section>
 
+  <section id="contact">
+    <div class="container">
+      <div class="contact-container">
+        <div class="contact-header">
+          <h2>Get In Touch</h2>
+          <p>Let's create something amazing together</p>
+        </div>
 
+        <p>Feel free to reach out for collaboration or just to say hello!</p>
 
+        <ul class="social-links">
+          <li><a href="https://github.com/Dekkar01" target="_blank"><i class="fa-brands fa-github"></i></a></li>
+          <li><a href="https://t.me/y_or_n" target="_blank"><i class="fa-brands fa-telegram"></i></a></li>
+          <li><a href="https://www.linkedin.com/in/dekkar01/" target="_blank"><i
+                class="fa-brands fa-linkedin-in"></i></a></li>
+          <li><a href="mailto:hello@example.com" target="_blank"><i class="fa-solid fa-envelope"></i></a></li>
+        </ul>
+      </div>
+    </div>
+  </section>
 
   <footer>
     <div class="container">
