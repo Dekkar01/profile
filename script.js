@@ -24,23 +24,54 @@ document.addEventListener('DOMContentLoaded', function () {
   });
 
   // Animation for skill bars
-  const skillBars = document.querySelectorAll('.skill-progress');
+  // Анимация для таймлайна при скролле
+  document.addEventListener('DOMContentLoaded', function () {
+    const timelineItems = document.querySelectorAll('.timeline-item');
 
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        const width = entry.target.style.width;
-        entry.target.style.transition = 'width 1.5s ease-in-out';
-        entry.target.style.width = '0';
-        setTimeout(() => {
-          entry.target.style.width = width;
-        }, 300);
-        observer.unobserve(entry.target);
-      }
+    const animateTimeline = () => {
+      timelineItems.forEach(item => {
+        const position = item.getBoundingClientRect().top;
+        const screenPosition = window.innerHeight * 0.8;
+
+        if (position < screenPosition) {
+          item.style.opacity = '1';
+          item.style.transform = 'translateY(0)';
+        }
+      });
+    };
+
+    // Инициализация анимации
+    timelineItems.forEach(item => {
+      item.style.opacity = '0';
+      item.style.transform = 'translateY(30px)';
+      item.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
     });
-  }, { threshold: 0.5 });
 
-  skillBars.forEach(bar => {
-    observer.observe(bar);
+    window.addEventListener('scroll', animateTimeline);
+    animateTimeline(); // Проверить при загрузке
+
+    // Анимация для карточек навыков
+    const skillCards = document.querySelectorAll('.skill-card');
+    let animated = false;
+
+    const animateSkills = () => {
+      if (animated) return;
+
+      skillCards.forEach((card, index) => {
+        const cardPosition = card.getBoundingClientRect().top;
+        const screenPosition = window.innerHeight * 0.8;
+
+        if (cardPosition < screenPosition) {
+          setTimeout(() => {
+            card.style.animation = `fadeInUp 0.6s forwards ${index * 0.1}s`;
+          }, 100);
+        }
+      });
+
+      animated = true;
+    };
+
+    window.addEventListener('scroll', animateSkills);
+    animateSkills(); // Проверить при загрузке
   });
 });
