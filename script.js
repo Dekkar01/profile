@@ -101,4 +101,19 @@ document.addEventListener('DOMContentLoaded', function () {
       hamburger.classList.remove('active');
     }
   });
+
+  // Switch theme
+
+  let themeBtn = document.querySelector('#switch-btn');
+
+  themeBtn.addEventListener('click', function (e) {
+
+    if (document.documentElement.getAttribute('data-theme') === 'light') {
+      document.documentElement.removeAttribute('data-theme');
+    } else {
+      document.documentElement.setAttribute('data-theme', 'light');
+    }
+
+  });
 });
+

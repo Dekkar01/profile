@@ -6,7 +6,87 @@
   --text: #8892b0;
   --card-bg: rgba(23, 42, 69, 0.7);
   --transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  --background-gradient: radial-gradient(circle at 10% 20%, rgba(100, 255, 218, 0.03) 0%, transparent 20%),
+    radial-gradient(circle at 90% 80%, rgba(100, 255, 218, 0.03) 0%, transparent 20%),
+    linear-gradient(45deg, transparent 49%, rgba(100, 255, 218, 0.02) 50%, transparent 51%),
+    linear-gradient(-45deg, transparent 49%, rgba(100, 255, 218, 0.02) 50%, transparent 51%);
+  --background-color: linear-gradient(135deg, #0a192f, #0d1e38);
+  --nav-background: rgba(10, 25, 47, 0.9);
+
+  --switch-background-color: rgba(235, 222, 247, 0.824);
+  --shadow-switch-hover: 0 0 20px rgba(100, 255, 218, 0.3);
+  --shadow-switch-bg-color-hover: #bcf5e7;
+  --border-switch: 0 solid rgba(28, 28, 28, 0);
+
+  --portfolio-background: linear-gradient(to bottom, rgba(10, 25, 47, 0.9), rgba(10, 25, 47, 1));
+  --social-background: rgba(100, 255, 218, 0.1);
+  --shadow-photo: 0 0 40px rgba(100, 255, 218, 0.3);
+  --border-bottom-nav: 1px solid rgba(100, 255, 218, 0.1);
+  --color-avatar-placeholder: rgba(100, 255, 218, 0.2);
+  --bg-btn-before: rgba(100, 255, 218, 0.1);
+  --shadow-btn-hover: 0 0 15px rgba(100, 255, 218, 0.3);
+  --border-pj-card: 1px solid rgba(100, 255, 218, 0.1);
+  --shadow-pj-card: 0 10px 30px rgba(0, 0, 0, 0.2);
+  --shadow-pj-card-hover: 0 20px 40px rgba(100, 255, 218, 0.2);
+  --shadow-timeline-item-icon-hover: 0 0 20px rgba(100, 255, 218, 0.3);
+  --border-timeline-content: 1px solid rgba(100, 255, 218, 0.1);
+  --shadow-timeline-item-content-hover: 0 10px 25px rgba(100, 255, 218, 0.1);
+  --border-hex: 1px solid rgba(100, 255, 218, 0.1);
+  --shadow-hex: 0 5px 15px rgba(0, 0, 0, 0.2);
+  --shadow-hex-hover: 0 15px 30px rgba(100, 255, 218, 0.2);
+  --border-social-links: 1px solid rgba(100, 255, 218, 0.1);
+  --shadow-social-links: 0 5px 15px rgba(0, 0, 0, 0.2);
+  --shadow-social-links-hover: 0 15px 30px rgba(100, 255, 218, 0.3);
+  --border-top-footer: 1px solid rgba(100, 255, 218, 0.1);
+  --shadow-menu-active: -5px 0 15px rgba(0, 0, 0, 0.2);
+
 }
+
+[data-theme="light"] {
+
+  --primary: #f5f7fa;
+  --secondary: #e6e9ef;
+  --accent: #9fb8c9;
+  --light: #24313d;
+  --text: #6b7b8c;
+  --card-bg: rgba(230, 233, 239, 0.6);
+  --transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  --background-gradient:
+    radial-gradient(circle at 10% 20%, rgba(159, 184, 201, 0.05) 0%, transparent 20%),
+    radial-gradient(circle at 90% 80%, rgba(159, 184, 201, 0.05) 0%, transparent 20%),
+    linear-gradient(45deg, transparent 49%, rgba(159, 184, 201, 0.03) 50%, transparent 51%),
+    linear-gradient(-45deg, transparent 49%, rgba(159, 184, 201, 0.03) 50%, transparent 51%);
+  --background-color: linear-gradient(135deg, #f5f7fa, #eef1f5);
+  --nav-background: rgba(245, 247, 250, 0.9);
+  --switch-background-color: rgba(200, 210, 220, 0.3);
+  --portfolio-background: linear-gradient(to bottom, rgba(245, 247, 250, 0.9), rgba(245, 247, 250, 1));
+  --social-background: rgba(159, 184, 201, 0.15);
+  --shadow-photo: 0 0 25px rgba(159, 184, 201, 0.2);
+  --border-bottom-nav: 1px solid rgba(159, 184, 201, 0.15);
+  --shadow-switch-hover: 0 0 15px rgba(159, 184, 201, 0.2);
+  --shadow-switch-bg-color: #e6e9ef;
+  --border-switch: 1px solid rgba(159, 184, 201, 0.2);
+  --color-avatar-placeholder: rgba(159, 184, 201, 0.2);
+  --bg-btn-before: rgba(159, 184, 201, 0.15);
+  --shadow-btn-hover: 0 0 10px rgba(159, 184, 201, 0.2);
+  --border-pj-card: 1px solid rgba(159, 184, 201, 0.15);
+  --shadow-pj-card: 0 5px 20px rgba(0, 0, 0, 0.08);
+  --shadow-pj-card-hover: 0 8px 25px rgba(159, 184, 201, 0.15);
+  --shadow-timeline-item-icon-hover: 0 0 15px rgba(159, 184, 201, 0.2);
+  --border-timeline-content: 1px solid rgba(159, 184, 201, 0.15);
+  --shadow-timeline-item-content-hover: 0 5px 15px rgba(159, 184, 201, 0.1);
+  --border-hex: 1px solid rgba(159, 184, 201, 0.15);
+  --shadow-hex: 0 3px 12px rgba(0, 0, 0, 0.07);
+  --shadow-hex-hover: 0 8px 20px rgba(159, 184, 201, 0.15);
+  --border-social-links: 1px solid rgba(159, 184, 201, 0.15);
+  --shadow-social-links: 0 3px 10px rgba(0, 0, 0, 0.07);
+  --shadow-social-links-hover: 0 5px 15px rgba(159, 184, 201, 0.2);
+  --border-top-footer: 1px solid rgba(159, 184, 201, 0.15);
+  --shadow-menu-active: -3px 0 10px rgba(0, 0, 0, 0.08);
+}
+
+
+
 
 * {
   margin: 0;
@@ -16,12 +96,15 @@
 }
 
 body {
-  background: linear-gradient(135deg, #0a192f, #0d1e38);
+  background: var(--background-color);
   color: var(--light);
   overflow-x: hidden;
   min-height: 100vh;
   position: relative;
 }
+
+
+
 
 /* Geometric background patterns */
 body::before {
@@ -31,11 +114,11 @@ body::before {
   left: 0;
   width: 100%;
   height: 100%;
-  background:
-    radial-gradient(circle at 10% 20%, rgba(100, 255, 218, 0.03) 0%, transparent 20%),
+  background: var(--background-gradient);
+  /* radial-gradient(circle at 10% 20%, rgba(100, 255, 218, 0.03) 0%, transparent 20%),
     radial-gradient(circle at 90% 80%, rgba(100, 255, 218, 0.03) 0%, transparent 20%),
     linear-gradient(45deg, transparent 49%, rgba(100, 255, 218, 0.02) 50%, transparent 51%),
-    linear-gradient(-45deg, transparent 49%, rgba(100, 255, 218, 0.02) 50%, transparent 51%);
+    linear-gradient(-45deg, transparent 49%, rgba(100, 255, 218, 0.02) 50%, transparent 51%); */
   background-size: 80px 80px;
   z-index: -2;
 }
@@ -44,7 +127,8 @@ h1,
 h2,
 h3 {
   font-weight: 600;
-  color: var(--light);
+  color: var(--text);
+  /*--light*/
 }
 
 h1 {
@@ -114,7 +198,7 @@ section {
   opacity: 0;
   transition: var(--transition);
   z-index: 10;
-  box-shadow: 0 0 40px rgba(100, 255, 218, 0.3);
+  box-shadow: var(--shadow-photo);
   border: 3px solid var(--accent);
   pointer-events: none;
 }
@@ -135,18 +219,18 @@ section {
   justify-content: space-between;
   align-items: center;
   padding: 1.5rem 5%;
-  background: rgba(10, 25, 47, 0.9);
+  background: var(--nav-background);
   backdrop-filter: blur(10px);
   z-index: 1000;
-  border-bottom: 1px solid rgba(100, 255, 218, 0.1);
+  border-bottom: var(--border-bottom-nav);
 }
 
 #logo {
   cursor: pointer;
   position: relative;
   overflow: hidden;
-  width: 60px;
-  height: 60px;
+  /* width: 60px;
+  height: 60px; */
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -155,16 +239,29 @@ section {
   transition: var(--transition);
 }
 
+/* LOGOOOOOOOOOOOOO CHANGE HERE ALSOOOOOO */
+
 #logo:hover {
   transform: scale(1.1);
-  box-shadow: 0 0 20px rgba(100, 255, 218, 0.3);
+  box-shadow: var(--shadow-switch-hover);
+  background-color: var(--shadow-switch-bg-color-hover);
 }
 
-#logo h1 {
-  font-size: 1.8rem;
-  color: var(--accent);
-  padding-top: 10px;
+
+
+#switch-btn {
+  background-color: var(--switch-background-color);
+  border: var(--border-switch);
+  width: 60px;
+  height: 60px;
 }
+
+#logo i {
+  font-size: 18px;
+}
+
+
+
 
 #menu-list {
   display: flex;
@@ -177,7 +274,7 @@ section {
 }
 
 #menu-list a {
-  color: var(--light);
+  color: var(--text);
   text-decoration: none;
   font-size: 1.1rem;
   position: relative;
@@ -244,7 +341,7 @@ section {
   align-items: center;
   justify-content: center;
   font-size: 4rem;
-  color: rgba(100, 255, 218, 0.2);
+  color: var(--color-avatar-placeholder);
   border: 2px dashed var(--accent);
   transition: var(--transition);
   cursor: pointer;
@@ -293,7 +390,7 @@ section {
   left: 0;
   width: 0;
   height: 100%;
-  background: rgba(100, 255, 218, 0.1);
+  background: var(--bg-btn-before);
   transition: var(--transition);
   z-index: -1;
 }
@@ -303,14 +400,14 @@ section {
 }
 
 .btn:hover {
-  box-shadow: 0 0 15px rgba(100, 255, 218, 0.3);
+  box-shadow: var(--shadow-btn-hover);
   transform: translateY(-3px);
 }
 
 /* PROJECTTTTS */
 
 #portfolio {
-  background: linear-gradient(to bottom, rgba(10, 25, 47, 0.9), rgba(10, 25, 47, 1));
+  background: var(--portfolio-background);
 }
 
 .section-header {
@@ -332,10 +429,10 @@ section {
   border-radius: 12px;
   overflow: hidden;
   transition: var(--transition);
-  border: 1px solid rgba(100, 255, 218, 0.1);
+  border: var(--border-pj-card);
   backdrop-filter: blur(10px);
   transform-style: preserve-3d;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  box-shadow: var(--shadow-pj-card);
   display: flex;
   flex-direction: column;
 }
@@ -350,7 +447,7 @@ section {
 
 .project-card:hover {
   transform: rotate(0) translateY(-10px) scale(1.02);
-  box-shadow: 0 20px 40px rgba(100, 255, 218, 0.2);
+  box-shadow: var(--shadow-pj-card-hover);
   z-index: 5;
 }
 
@@ -404,7 +501,7 @@ section {
 /* EDUCATION */
 
 #experience {
-  background: linear-gradient(to bottom, rgba(10, 25, 47, 1), rgba(10, 25, 47, 0.9));
+  background: var(--portfolio-background);
 }
 
 .geometric-timeline {
@@ -441,14 +538,14 @@ section {
 
 .timeline-item:hover .timeline-icon {
   transform: scale(1.1) rotate(10deg);
-  box-shadow: 0 0 20px rgba(100, 255, 218, 0.3);
+  box-shadow: var(--shadow-timeline-item-icon-hover);
 }
 
 .timeline-content {
   background: var(--card-bg);
   border-radius: 10px;
   padding: 1.5rem;
-  border: 1px solid rgba(100, 255, 218, 0.1);
+  border: var(--border-timeline-content);
   transition: var(--transition);
   backdrop-filter: blur(10px);
   flex-grow: 1;
@@ -456,7 +553,7 @@ section {
 
 .timeline-item:hover .timeline-content {
   transform: translateX(10px);
-  box-shadow: 0 10px 25px rgba(100, 255, 218, 0.1);
+  box-shadow: var(--shadow-timeline-item-content-hover);
 }
 
 .timeline-date {
@@ -475,7 +572,7 @@ section {
 /* SKILLS */
 
 #skills {
-  background: linear-gradient(to bottom, rgba(10, 25, 47, 0.9), rgba(10, 25, 47, 1));
+  background: var(--portfolio-background);
 }
 
 .hex-grid {
@@ -492,7 +589,7 @@ section {
   background: var(--card-bg);
   border-radius: 10px;
   transition: var(--transition);
-  border: 1px solid rgba(100, 255, 218, 0.1);
+  border: var(--border-hex);
   backdrop-filter: blur(10px);
   display: flex;
   flex-direction: column;
@@ -500,13 +597,13 @@ section {
   justify-content: center;
   text-align: center;
   padding: 1rem;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  box-shadow: var(--shadow-hex);
   clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
 }
 
 .hex-item:hover {
   transform: translateY(-10px) scale(1.05);
-  box-shadow: 0 15px 30px rgba(100, 255, 218, 0.2);
+  box-shadow: var(--shadow-hex-hover);
   z-index: 2;
 }
 
@@ -565,10 +662,10 @@ section {
   justify-content: center;
   font-size: 2rem;
   transition: var(--transition);
-  border: 1px solid rgba(100, 255, 218, 0.1);
+  border: var(--border-social-links);
   position: relative;
   overflow: hidden;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  box-shadow: var(--shadow-social-links);
 }
 
 .social-links a::before {
@@ -578,7 +675,7 @@ section {
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(100, 255, 218, 0.1);
+  background: var(--social-background);
   transform: scale(0);
   border-radius: 50%;
   transition: transform 0.5s ease;
@@ -591,7 +688,7 @@ section {
 
 .social-links a:hover {
   transform: translateY(-10px);
-  box-shadow: 0 15px 30px rgba(100, 255, 218, 0.3);
+  box-shadow: var(--shadow-social-links-hover);
 }
 
 /* Footer */
@@ -599,8 +696,8 @@ section {
 footer {
   text-align: center;
   padding: 2rem;
-  border-top: 1px solid rgba(100, 255, 218, 0.1);
-  background: rgba(10, 25, 47, 0.9);
+  border-top: var(--border-top-footer);
+  background: var(--nav-background);
   position: relative;
   z-index: 2;
 }
@@ -616,7 +713,7 @@ footer p {
 .particle {
   position: absolute;
   border-radius: 50%;
-  background: rgba(100, 255, 218, 0.1);
+  background: var(--social-background);
   z-index: -1;
   animation: float 15s infinite ease-in-out;
 }
@@ -691,7 +788,7 @@ footer p {
     height: 100vh;
     width: 70%;
     max-width: 300px;
-    background: rgba(10, 25, 47, 0.95);
+    background: var(--nav-background);
     backdrop-filter: blur(10px);
     flex-direction: column;
     align-items: center;
@@ -699,7 +796,7 @@ footer p {
     gap: 2.5rem;
     transition: right 0.5s ease;
     z-index: 999;
-    box-shadow: -5px 0 15px rgba(0, 0, 0, 0.2);
+    box-shadow: var(--shadow-menu-active);
   }
 
   #menu-list ul.active {
