@@ -13,10 +13,17 @@
   --background-color: linear-gradient(135deg, #0a192f, #0d1e38);
   --nav-background: rgba(10, 25, 47, 0.9);
 
-  --switch-background-color: rgba(235, 222, 247, 0.824);
+  --switch-background-color: rgba(10, 25, 47, 0.9);
   --shadow-switch-hover: 0 0 20px rgba(100, 255, 218, 0.3);
-  --shadow-switch-bg-color-hover: #bcf5e7;
+  
   --border-switch: 0 solid rgba(28, 28, 28, 0);
+    /* SWITCH */
+  --switch-background-color: rgba(10, 25, 47, 0.9);
+  --switch-bg-color-hover: #bcf5e7;
+
+  --switch-icon-color: #bcf5e7;
+  --switch-icon-color-hover: rgba(10, 25, 47, 0.9);
+  --shadow-switch-bg-color-hover: #bcf5e7;
 
   --portfolio-background: linear-gradient(to bottom, rgba(10, 25, 47, 0.9), rgba(10, 25, 47, 1));
   --social-background: rgba(100, 255, 218, 0.1);
@@ -58,14 +65,27 @@
     linear-gradient(-45deg, transparent 49%, rgba(159, 184, 201, 0.03) 50%, transparent 51%);
   --background-color: linear-gradient(135deg, #f5f7fa, #eef1f5);
   --nav-background: rgba(245, 247, 250, 0.9);
-  --switch-background-color: rgba(200, 210, 220, 0.3);
+
+     /* SWITCH */
+  --shadow-switch-hover: 0 0 15px rgba(159, 184, 201, 0.2);
+  --shadow-switch-bg-color: #e6e9ef;
+  --border-switch: 0 solid rgba(28, 28, 28, 1);
+  --switch-background-color: rgba(10, 25, 47, 0.9);
+  --switch-bg-color-hover: rgba(245, 247, 250, 0.9);;
+
+  --switch-icon-color: #6b7b8c;
+  --switch-icon-color-hover: rgba(10, 25, 47, 0.9);
+  --shadow-switch-bg-color-hover: rgba(10, 25, 47, 0.9);;
+
+ 
+
+
+
   --portfolio-background: linear-gradient(to bottom, rgba(245, 247, 250, 0.9), rgba(245, 247, 250, 1));
   --social-background: rgba(159, 184, 201, 0.15);
   --shadow-photo: 0 0 25px rgba(159, 184, 201, 0.2);
   --border-bottom-nav: 1px solid rgba(159, 184, 201, 0.15);
-  --shadow-switch-hover: 0 0 15px rgba(159, 184, 201, 0.2);
-  --shadow-switch-bg-color: #e6e9ef;
-  --border-switch: 1px solid rgba(159, 184, 201, 0.2);
+  
   --color-avatar-placeholder: rgba(159, 184, 201, 0.2);
   --bg-btn-before: rgba(159, 184, 201, 0.15);
   --shadow-btn-hover: 0 0 10px rgba(159, 184, 201, 0.2);
@@ -132,7 +152,7 @@ h3 {
 }
 
 h1 {
-  font-size: clamp(2.5rem, 5vw, 4rem);
+  font-size: clamp(2rem, 4vw, 3rem);
   line-height: 1.1;
   margin-bottom: 1rem;
 }
@@ -241,14 +261,6 @@ section {
 
 /* LOGOOOOOOOOOOOOO CHANGE HERE ALSOOOOOO */
 
-#logo:hover {
-  transform: scale(1.1);
-  box-shadow: var(--shadow-switch-hover);
-  background-color: var(--shadow-switch-bg-color-hover);
-}
-
-
-
 #switch-btn {
   background-color: var(--switch-background-color);
   border: var(--border-switch);
@@ -258,10 +270,27 @@ section {
 
 #logo i {
   font-size: 18px;
+  color: var(--switch-icon-color);
+}
+
+#logo:hover {
+  transform: scale(1.1);
+  box-shadow: var(--shadow-switch-hover);
+  
+}
+
+#logo:hover button {
+  background-color: var(--switch-bg-color-hover);
+}
+
+#logo:hover i {
+  color: var(--switch-icon-color-hover);
 }
 
 
 
+
+/* MENU */
 
 #menu-list {
   display: flex;
